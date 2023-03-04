@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}
+Курс прикладной информатики для студентов групп "Маркшейдерское дело"
+{% endblock %}
+
+{% block style %}
+{% include "inc_style.html" %}
+{% endblock %}
+
+{% block header %}
+{% include "inc_header.html" %}
+{% endblock %}
+
+{% block content_header %}
+{% endblock %}
+
+{% block sidebar %}
+{% include "inc_sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+<h1>Добавьте нового участника группы</h1>
+
+<form action="" method="post">
+    <div class="form_settings">
+        <p>
+            <select name="type">
+                <option value="student">СТУДЕНТ</option>
+                <option value="teacher">ПРЕПОДАВАТЕЛЬ</option>
+            </select>
+        </p>
+        <p>
+            <span>ФИО</span><input class="contact" type="text" name="name" value=""/>
+        </p>
+        <input name="id" value="{{id}}"/>
+        <p style="padding-top: 15px">
+            <span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted"
+                                      value="submit"/>
+        </p>
+    </div>
+</form>
+
+{% endblock %}
+
+{% block content_footer %}
+{% endblock %}
+
+{% block footer %}
+{% include "inc_footer.html" %}
+{% endblock %}
