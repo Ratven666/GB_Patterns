@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}
+Курс прикладной информатики для студентов групп "Маркшейдерское дело"
+{% endblock %}
+
+{% block style %}
+{% include "inc_style.html" %}
+{% endblock %}
+
+{% block header %}
+{% include "inc_header.html" %}
+{% endblock %}
+
+{% block content_header %}
+{% endblock %}
+
+{% block sidebar %}
+{% include "inc_sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+<div>
+    <a href="/create_group/">Создать новую группу</a>
+</div>
+<div>
+    <h1>Список существующих групп</h1>
+    {% for group in objects_list %}
+    <li>
+        {{group.name}} <span>Количество студентов: {{group.students.__len__()}}</span>
+        <a href="/group_list/?id={{group.id}}">Посмотреть группу</a>
+    </li>
+    {% endfor %}
+</div>
+
+<div>
+    <a href="/student-list/">Список всех студентов</a>
+</div>
+{% endblock %}
+
+{% block content_footer %}
+{% endblock %}
+
+{% block footer %}
+{% include "inc_footer.html" %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}
+Курс прикладной информатики для студентов групп "Маркшейдерское дело"
+{% endblock %}
+
+{% block style %}
+{% include "inc_style.html" %}
+{% endblock %}
+
+{% block header %}
+{% include "inc_header.html" %}
+{% endblock %}
+
+{% block content_header %}
+{% endblock %}
+
+{% block sidebar %}
+{% include "inc_sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+<h1>Создание группы</h1>
+
+<form action="" method="post">
+    <div class="form_settings">
+        <p>
+            <select name="type">
+                <option value="mine_survey">Маркшейдерское дело</option>
+                <option value="survey">Инженерная геодезия</option>
+            </select>
+        </p>
+        <p style="padding-top: 15px">
+            <span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted"
+                                      value="submit"/>
+        </p>
+    </div>
+</form>
+
+{% endblock %}
+
+{% block content_footer %}
+{% endblock %}
+
+{% block footer %}
+{% include "inc_footer.html" %}
+{% endblock %}
